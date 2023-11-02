@@ -14,12 +14,17 @@ export default async function Home() {
   return (
     <div>
       <Image src="/banner-home-01.png" width={0} height={0} className="w-full h-auto p-5" sizes="100vw" alt="Até 50% de desconto esse mês" />
+
       <div className="mt-8 p-5">
         <Categories />
       </div>
+
       <div className="mt-8">
+        <p className="font-semibold uppercase pl-5 mb-3">Ofertas</p>
         <ProductList products={deals} />
       </div>
+
+      <Image src="/banner-home-02.png" width={0} height={0} className="w-full h-auto p-5" sizes="100vw" alt="Até 50% de desconto em mouses" />
     </div>
 
   )
