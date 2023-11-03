@@ -98,7 +98,7 @@ async function main() {
       data: {
         name: "Teclados",
         slug: "keyboards",
-        imageUrl: "https://fsw-store.s3.sa-east-1.amazonaws.com/keyboards.png",
+        imageUrl: "https://resource.logitech.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/products/keyboards/mx-keys-s/product-gallery/graphite/mx-keys-s-keyboard-top-view-graphite-us.png?v=1",
       },
     });
 
