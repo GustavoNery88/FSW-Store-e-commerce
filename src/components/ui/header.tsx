@@ -3,10 +3,11 @@
 import { LogInIcon, MenuIcon, ShoppingCartIcon, PercentIcon, ListOrderedIcon, HomeIcon, LogOutIcon } from "lucide-react";
 import { Button } from "./button";
 import { Card } from "./card";
-import { Sheet, SheetContent, SheetHeader, SheetTrigger } from "./sheet";
+import { Sheet, SheetClose, SheetContent, SheetHeader, SheetTrigger } from "./sheet";
 import { signIn, signOut, useSession } from "next-auth/react";
 import { Avatar, AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
 import { Separator } from "@radix-ui/react-separator";
+import Link from "next/link";
 
 const Header = () => {
 
@@ -42,7 +43,7 @@ const Header = () => {
                                     </AvatarFallback>
 
                                     {data.user.image && <AvatarImage className="w-14 rounded-full" src={data.user.image} />}
-                                </Avatar> 
+                                </Avatar>
 
                                 <div className="flex flex-col">
                                     <p className="font-medium">{data.user.name}</p>
@@ -88,10 +89,18 @@ const Header = () => {
                             Ofertas
                         </Button>
 
-                        <Button className="w-full justify-start gap-2" variant="outline">
-                            <ListOrderedIcon size={16} />
-                            Catálogo
-                        </Button>
+                        <SheetClose asChild>
+                            <Link href="/catalog">
+                                <Button
+                                    variant="outline"
+                                    className="w-full justify-start gap-2"
+                                >
+                                    <ListOrderedIcon size={16} />
+                                    Catálogo
+                                </Button>
+                            </Link>
+                        </SheetClose>
+
                     </div>
                 </SheetContent>
             </Sheet>
