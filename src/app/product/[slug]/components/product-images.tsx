@@ -28,20 +28,14 @@ const ProductImages = ({ imageUrls, name }: ProductImagesProps) => {
                     <button
                         key={imageUrl}
                         className={`flex h-[100px] items-center justify-center rounded-lg bg-accent
-                ${imageUrl === currentImage &&
-                            "border-2 border-solid border-primary"
-                            }
-            `}
-                        onClick={() => handleImageClick(imageUrl)}
-                    >
+                ${imageUrl === currentImage && "border-2 border-solid border-primary"}`}onClick={() => handleImageClick(imageUrl)}>
                         <Image
                             src={imageUrl}
                             alt={name}
                             height={0}
                             width={0}
                             sizes="100vw"
-                            className="h-auto max-h-[70%] w-auto max-w-[80%]"
-                        />
+                            className="h-auto max-h-[70%] w-auto max-w-[80%]"/>
                     </button>
                 ))}
             </div>
