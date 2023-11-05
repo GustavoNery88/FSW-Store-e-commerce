@@ -34,7 +34,7 @@ const ProductInfo = ({ product: { basePrice, name, description, discountPercenta
 
 
     return (
-        <div className="flex flex-col px-5 mb-10">
+        <div className="flex flex-col px-5">
             <h1 className="text-lg">{name}</h1>
 
             <div className="flex items-center gap-2">
