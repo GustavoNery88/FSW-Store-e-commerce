@@ -18,6 +18,8 @@ model Category {
   products Product[]
 }
 
+
+
 model Product {
   id                 String         @id @default(uuid())
   name               String
@@ -29,6 +31,8 @@ model Product {
   category           Category       @relation(fields: [categoryId], references: [id])
   discountPercentage Int            @default(0)
 }
+
+
 
 model Account {
   id                 String  @id @default(cuid())
