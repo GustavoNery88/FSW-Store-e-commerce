@@ -2,7 +2,7 @@ import { Badge } from "@/components/ui/badge";
 import ProductItem from "@/components/ui/product-item";
 import { computeProductTotalPrice } from "@/helpers/product";
 import { prismaClient } from "@/lib/prisma";
-import { PercentIcon } from "lucide-react";
+import { PercentIcon} from "lucide-react";
 
 const DealsPage = async () => {
   const deals = await prismaClient.product.findMany({
@@ -15,7 +15,7 @@ const DealsPage = async () => {
 
   return (
     <div className="flex flex-col gap-8 p-5">
-      <Badge>
+      <Badge className="w-fit gap-1 border-primary border-2 text-base uppercase px-3 py-[0.375rem]" variant="outline">
         <PercentIcon size={16} />
         Ofertas
       </Badge>
